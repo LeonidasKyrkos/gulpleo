@@ -7,3 +7,986 @@
 body{
 	background-color: $white;
 }
+
+$white:  #fff;
+$black:  #000;
+
+.iframewrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 100; 
+  display: none;
+}
+
+.iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.iphone__wrap {
+	height: 700px;
+	background-color: #d0cfcd;
+	width: 400px;
+	border-radius: 56px;
+	box-shadow: -4px 5px 7px rgba(0,0,0,0.4);
+	border: 1px solid rgba(0,0,0,0.4);
+	border-right: none;
+	border-top: none;
+	position: relative;
+	z-index: 9999;
+	margin: 0 auto;
+	
+	&:before {
+		content: "";
+		@include linear-gradient(top,#9B9B9B 0%,#9B9B9B 5%,#E8E8E8 10%, #d9d8d8 15%, #d9d8d8 25%,#8c8d8d 80%, #c3c2c2 85%, #c3c2c2 90%, #777777 95%);
+		height: 25px;
+		width: 2px;
+		position: absolute;
+		left: -3px;
+		top: 60px;
+		border-radius: 3px;
+		box-shadow: -3px 2px 4px rgba(0,0,0,0.4);
+	}
+	
+	&:after {
+		content: "";
+		@include linear-gradient(top,#9B9B9B 0%,#9B9B9B 5%,#E8E8E8 10%, #d9d8d8 15%, #d9d8d8 25%,#8c8d8d 80%, #c3c2c2 85%, #c3c2c2 90%, #777777 95%);
+		height: 15px;
+		width: 2px;
+		position: absolute;
+		left: -3px;
+		top: 87px;
+		border-radius: 3px;
+		box-shadow: -3px 2px 4px rgba(0,0,0,0.4);
+	}
+}
+
+.iphone__btn-on {
+	width: 40px;
+	height: 4px;
+	background-color: white;
+	border-radius: 2px;
+	@include linear-gradient(right,gray 0%, white 16%,lightgray 26%,lightgray 72%,white 88%,gray 100%);
+	border: 1px solid gray;
+	position: absolute;
+	top: -4px;
+	right: 70px;
+	z-index: -1;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.iphone__inner-wrap {
+	background-color: #f2f2f2;
+	top: 4px;
+	position: absolute;
+	left: 4px;
+	right: 4px;
+	bottom: 4px;
+	border-radius: 53px;
+	box-shadow: 0 0 4px rgba(0,0,0,0.4);
+	border: 2px solid white;
+	
+	&:after {
+		content: "";
+		width: 6px;
+		height: 6px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: 30px;
+		@include linear-gradient(top,rgba(0,0,0,0.5) 0%, lightgray 95%,rgba(0,0,0,0.5) 100%);
+		border-radius: 100%;
+		border: 3px solid #f2f2f2;
+		box-shadow: 0 0 1px rgba(0,0,0,0.25);
+	}
+}
+
+.iphone__screen-bg {
+	position: absolute;
+	top: 62px;
+	left: 8px;
+	right: 8px;
+	bottom: 42px;
+	@include linear-gradient(top,#878787 0%,#878787 40%,#dddddd 100%);
+	border-radius: 2px;
+	z-index: 5;
+  
+}
+
+.iphone__screen {
+	border-radius: 2px;
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	right: 3px;
+	bottom: 3px;
+	box-shadow: 0 -1px 3px rgba(255,255,255,0.4);
+  
+	
+	&:after {
+		content: "";
+		position: absolute;
+		top: 90px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		@include linear-gradient(top,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.1) 80%,rgba(0,0,0,0.1) 100%)
+	}
+}
+
+.iphone__screen-bgcss {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: $white;
+  overflow: hidden;
+  @include background(linear-gradient(top,#e75560 0%, #f4bd32 100%));
+}
+
+.shape1 {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  left: -300px;
+  bottom: -350px;
+  z-index: 2;
+  @include background(linear-gradient(top,#0071bd 0%,#02c8ea 20%));
+  @include transform(rotate(35deg));
+}
+
+.shape2 {
+  position: absolute;
+  top: 0px;
+  left: -70px;
+  height: 0px; 
+  width: 0px; 
+  border-top: 100px solid #02a2dc; 
+  border-left: 100px solid #02a2dc; 
+  border-right: 100px solid transparent; 
+  border-bottom: 100px solid transparent; 
+  @include transform(scaleX(0.4));
+}
+
+.shape3 {
+  position: absolute;
+  top: 50px;
+  left: -90px;
+  height: 0px; 
+  width: 0px; 
+  border-top: 100px solid #00c5b8; 
+  border-left: 100px solid #00c5b8; 
+  border-right: 100px solid transparent; 
+  border-bottom: 100px solid transparent; 
+  @include transform(scaleX(0.4));
+}
+
+.iphone__topbar {
+	height: 26px;
+	background-color: $black;
+	text-align: right;
+  font-family: Source Sans Pro;
+  position: relative;
+  z-index: 20;
+}
+
+.iphone__topbar-time, .iphone__topbar-timesuffix {
+	color: $white;
+	font-weight: 300;
+	font-size: 20px;
+	line-height: 26px;
+	text-transform: uppercase;
+	padding-right: 2px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 4px;
+}
+
+.iphone__signal {
+	margin: 2px 4px;
+	height: 20px;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	vertical-align: middle;
+	margin-bottom: 8px;
+	
+	&:after {
+		content: "";
+		background-color: $black;
+		position: absolute;
+		top: -3px;
+		left: -8px;
+		right: 0;
+		bottom: 9px;
+		@include transform(rotate(-45deg));
+	}
+	
+	ul {
+		display: block;
+		height: 20px;
+    -webkit-padding-start: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+	}
+}
+
+.iphone__signal-bar {
+	width: 3px;
+	height: 100%;
+	margin: 0 1px;
+	background-color: #a6a6a6;
+	display: inline-block;
+}
+
+.iphone__battery-text {
+	color: white;
+	line-height: 1;
+	font-size: 15px;
+	display: inline-block;
+	font-weight: 400;
+	padding-left: 1px;
+	vertical-align: middle;
+	line-height: 1;
+  margin-bottom: 1px;
+}
+
+.iphone__battery {
+	display: inline-block;
+	background-color: #666666;
+	width: 10px;
+	height: 14px;
+	vertical-align: middle;
+	margin-bottom: 3px;
+	margin-left: 3px;
+	margin-right: 4px;
+	position: relative;
+	
+	&:before {
+		content: "";
+		background-color: #666666;
+		width: 6px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: -2px;
+		height: 2px;
+	}
+}
+
+.iphone__bat-level {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  background-color: #addb45;
+}
+
+.iphone__search {
+	background-color: rgba(255,255,255,0.4);
+	height: 30px;
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-radius: 2px;
+	box-shadow: 0 0 3px rgba(0,0,0,0.2);
+	font-family: Titillium Web;
+	color: $white;
+	padding-left: 10px;
+	text-shadow: 2px 2px rgba(0,0,0,0.2);
+	position: relative;
+  z-index: 20;
+}
+
+.iphone__search-input {
+	background-color: transparent;
+	outline: none;
+	border: none;
+	color: white;
+	font-weight: 300;
+	font-size: 12px;
+	width: 80%;
+  height: 100%;
+  line-height: 32px;
+	
+	@include placeholder {
+		color: $white;
+		text-shadow: 2px 2px rgba(0,0,0,0.2);
+	}
+}
+
+.iphone__time-wrap {
+	text-align: center;
+	color: $white;
+	position: relative;
+	z-index: 20;
+}
+
+.iphone__time {
+	text-shadow: 1px 1px rgba(0,0,0,0.6);
+	font-size: 42px;
+	font-family: Karla;
+	display: inline-block;
+	line-height: 1;
+	padding-top: 30px;
+	padding-bottom: 5px;
+	font-weight: 400;
+	z-index: 20;
+}
+.iphone__time-suffix {
+	text-shadow: 1px 1px rgba(0,0,0,0.6);
+	font-size: 16px;
+	text-transform: uppercase;
+	padding-left: 3px;
+	font-weight: 400;
+	font-family: Karla;
+	z-index: 20;
+}
+
+.iphone__date {
+	font-size: 15px;
+	font-family: Karla;
+	display: block;
+	text-align: center;
+	text-shadow: 1px 1px rgba(0,0,0,0.4);
+	color: $white;
+	line-height: 1;
+	font-weight: 400;
+	margin-top: -5px;
+	z-index: 20;
+}
+
+.iphone__search-mic {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -11px;
+	width: 20px;
+	height: 23px;
+}
+
+.mic__head {
+	position: absolute;
+	top: 2px;
+	height: 11px;
+	width: 4px;
+	left: 0;
+	border: 2px solid white;
+	border-radius: 4px;
+	right: 0;
+	margin: 0 auto;
+}
+
+.mic__body {
+	position: absolute;
+	top: 9px;
+	left: 0;
+	height: 15px;
+	overflow: hidden;
+	right: 0;
+	margin: 0 auto;
+	
+	&:after {
+		content: "";
+		width: 12px;
+		position: absolute;
+		top: -15px;
+		border: 2px solid white;
+		border-radius: 100%;
+		height: 19px;
+		left: 0px;
+		right: 0;
+		margin: 0 auto;
+	}
+}
+
+.mic__foot {
+	position: absolute;
+	width: 2px;
+	height: 3px;
+	background-color: white;
+	left: 50%;
+	margin-left: -1px;
+	top: 17px;
+}
+
+.iphone__icons {
+	position: absolute;
+	top: 280px;
+	left: 10px;
+	right: 10px;
+	text-align: center;
+	z-index: 20;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+	
+	li {
+		display: inline-block;
+		margin: 9px 15px 15px;
+		vertical-align: middle;
+    @include transition(transform 0.15s ease);
+    cursor: pointer;
+    &:hover {
+      @include transform(scale(1.1));
+    }
+	}
+}
+
+.iphone__breadcrumbs {
+	position: absolute;
+	top: 450px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 20;
+}
+
+.iphone__breadcrumb {
+	width: 4px;
+	height: 4px;
+	background-color: rgba(255,255,255,0.4);
+	border-radius: 100%;
+	display: inline-block;
+	margin: 0 4px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.4);
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.activecrumb {
+	background-color: rgba(255,255,255,0.4);
+	border-radius: 100%;
+	display: inline-block;
+	margin: 0 4px;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.4);
+	vertical-align: middle;
+	cursor: pointer;
+	width: 7px;
+	height: 7px;
+	margin: 0 2px;
+}
+
+.iphone__footer {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	right: 10px;
+	text-align: center;
+	z-index: 20;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+	li {
+		display: inline-block;
+		margin: 0 12px;
+		vertical-align: middle;
+    @include transition(transform 0.15s ease);
+    cursor: pointer;
+    &:hover {
+      @include transform(scale(1.1));
+    }
+	}
+}
+
+	
+.phoneicon-messaging{
+	background-position: 0px 0px;
+	width: 40px;
+	height: 38px;
+  display: inline-block;
+	background-image: url(http://i.imgur.com/TSPCEFF.png);
+	background-repeat: no-repeat;
+}
+
+.phoneicon-appdraw{
+	background-position: 0px -235px;
+	width: 40px;
+	height: 40px;
+  display: inline-block;
+	background-image: url(http://i.imgur.com/TSPCEFF.png);
+	background-repeat: no-repeat;
+}
+
+.phoneicon-camera{
+	background-position: 0px -275px;
+	width: 40px;
+	height: 40px;
+  display: inline-block;
+	background-image: url(http://i.imgur.com/TSPCEFF.png);
+	background-repeat: no-repeat;
+}
+
+.phoneicon-chrome{
+	background-position: 0px -115px;
+	width: 40px;
+	height: 40px;
+  display: inline-block;
+	background-image: url(http://i.imgur.com/TSPCEFF.png);
+	background-repeat: no-repeat;
+}
+
+.phoneicon-contacts{
+	background-position: 0px -155px;
+	width: 40px;
+	height: 40px;
+  display: inline-block;
+	background-image: url(http://i.imgur.com/TSPCEFF.png);
+	background-repeat: no-repeat;
+}
+
+.phoneicon-facebook{
+	background-position: 0px -195px;
+	width: 40px;
+	height: 40px;
+  display: inline-block;
+	background-image: url(http://i.imgur.com/TSPCEFF.png);
+	background-repeat: no-repeat;
+}
+
+.phoneicon-gmail{
+	background-position: 0px -76px;
+	width: 40px;
+	height: 39px;
+  display: inline-block;
+	background-image: url(http://i.imgur.com/TSPCEFF.png);
+	background-repeat: no-repeat;
+}
+
+.phoneicon-music{
+	background-position: 0px -435px;
+	width: 42px;
+	height: 42px;
+  display: inline-block;
+	background-image: url(http://i.imgur.com/TSPCEFF.png);
+	background-repeat: no-repeat;
+}
+
+.phoneicon-notepad{
+	background-position: 0px -477px;
+	width: 38px;
+	height: 45px;
+  display: inline-block;
+	background-image: url(http://i.imgur.com/TSPCEFF.png);
+	background-repeat: no-repeat;
+}
+
+.phoneicon-phone{
+	background-position: 0px -38px;
+	width: 40px;
+	height: 38px;
+  display: inline-block;
+	background-image: url(http://i.imgur.com/TSPCEFF.png);
+	background-repeat: no-repeat;
+}
+
+.phoneicon-playstore{
+	background-position: 0px -315px;
+	width: 40px;
+	height: 40px;
+  display: inline-block;
+	background-image: url(http://i.imgur.com/TSPCEFF.png);
+	background-repeat: no-repeat;
+}
+
+.phoneicon-twitter{
+	background-position: 0px -355px;
+	width: 40px;
+	height: 40px;
+  display: inline-block;
+	background-image: url(http://i.imgur.com/TSPCEFF.png);
+	background-repeat: no-repeat;
+}
+
+.phoneicon-whatsapp{
+	background-position: 0px -395px;
+	width: 40px;
+	height: 40px;
+  display: inline-block;
+	background-image: url(http://i.imgur.com/TSPCEFF.png);
+	background-repeat: no-repeat;
+}
+
+.inactive {
+  &:before {
+    content: "";
+    background-color: $black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+  }
+}
+
+.apps {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+}
+
+.appActive {
+	z-index: 50;
+}
+
+
+
+$module: 		music;
+
+.#{$module} {
+	height: 100%;
+	background-color: #3B3C3E;
+	display: none;
+	&__header {
+	}
+	&__search {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		label {
+			width: 30px;
+			height: 30px;
+			background-color: forestgreen;
+			display: inline-block;
+			vertical-align: middle;
+			text-align: center;
+			cursor: pointer;
+
+			&:before {
+				content: "Q";
+				font-size: 25px;
+				font-weight: 600;
+				line-height: 25px;
+				color: $white;
+				font-family: Karla;
+			}
+		}
+		input {
+			width: 0;
+			display: inline-block;
+			vertical-align: middle;
+			line-height: 30px;
+			border: none;
+			outline: none;
+			height: 30px;
+			@include transition(width 0.3s ease-out);
+			padding: 0;
+			background-color: $white;
+		}
+	}
+	&__title {
+		color: $white;
+		font-size: 48px;
+		text-transform: none;
+		text-decoration: underline;
+		font-style: italic;
+		padding-top: 20px;
+		font-family: $secondaryFontFamily;
+		padding-bottom: 20px;
+		@include transition(padding 0.3s);
+	}
+	&__band-img {
+		width: auto;
+		height: 148px;
+	}
+	&__now-playing {
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 12px;
+		display: block;
+		padding-top: 10px;
+		color: $white;
+	}
+	&__band-title {
+		padding-top: 6px;
+		padding-bottom: 10px;
+		font-size: 24px;
+		font-weight: 400;
+		color: $white;
+	}
+	&__columns {
+
+	}
+	&__table {
+		width: 100%;
+		margin: 0 auto;
+		tr {
+			border-bottom: 1px solid $white;
+		}
+		td {
+			width: 50%;
+			padding: 5px;
+			text-align: right;
+			position: relative;
+			@include user-select(none);
+			cursor: default;
+			font-weight: 400;
+			font-size: 14px;
+			color: $white;
+
+			&:first-child {
+				text-align: left;
+			}
+		}
+		th {
+			width: 50%;
+			padding: 5px;
+			text-align: right;
+			position: relative;
+			@include user-select(none);
+			cursor: default;
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 12px;
+			color: $white;
+
+			&:first-child {
+				text-align: left;
+			}
+		}
+	}
+	&__buttons {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 60px;
+		text-align: center;
+		background-color: #035271;
+		border-top: 1px solid rgba(255,255,255,0.2);
+	}
+}
+
+.highlighted {
+	background-color: DODGERBLUE;
+	color: $white;
+	font-weight: 400;
+}
+
+.playing {
+	background-color: forestgreen;
+	color: $white;
+	font-weight: 400;
+}
+
+.paused {
+	@extend .playing;
+}
+
+.active {
+	input {
+		width: 150px;
+		padding-left: 10px;
+	}
+}
+
+.slideDown {
+	padding-top: 50px;
+}
+
+$module: 		btn;
+
+.#{$module} {
+	padding: 0;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	margin-left: 5px;
+	margin-right: 5px;
+	&--home {
+		@extend .btn;
+		position: absolute;
+		top: 19px;
+		left: 10px;
+		background-color: forestgreen;
+		width: 25px;
+		height: 20px;
+
+		&:before {
+			content: "";
+			position: absolute; 
+			top: -10px;
+			left: 50%;
+			margin-left: -18px;
+		    height: 0px; 
+		    width: 0px; 
+		    border-left: 18px solid transparent; 
+		    border-right: 18px solid transparent; 
+		    border-bottom: 10px solid forestgreen;
+		}
+
+		&:after {
+			content: "home";
+			text-transform: uppercase;
+			font-size: 7px;
+			position: absolute;
+			color: $white;
+			bottom: 7px;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+	&--random {
+		@extend .btn;
+		position: absolute;
+		left: 10px;
+		bottom: -11px;
+	}
+	&--prev {
+		@extend .btn;
+		position: absolute; 
+	    height: 0px; 
+	    width: 0px; 
+	    border-top: 10px solid transparent; 
+	    border-right: 20px solid $white; 
+	    border-bottom: 10px solid transparent; 
+	    background-color: transparent;
+	    outline: none;
+	    top: 50%;
+	    margin: -10px auto 0;
+	    left: 30%;
+	    &:after {
+	    	@extend .btn;
+	    	content: "";
+			position: absolute;
+			width: 3px;
+			left: -5px;
+			background-color: #fff;
+			top: -9px;
+			bottom: -9px;
+	    }
+
+	}
+	&--stopped {
+		@extend .btn;	 	
+	    position: absolute;
+    	border: 2px solid $white;
+    	border-radius: 100%;
+    	width: 40px;
+    	height: 40px;
+    	left: 50%;
+    	margin-left: -20px;
+    	top: 50%;
+    	margin-top: -20px;
+
+	    &:after {
+	    	content: "";
+	    	position: absolute; 
+		    height: 0px; 
+		    width: 0px; 
+		    border-top: 10px solid transparent; 
+		    border-left: 20px solid $white; 
+		    border-bottom: 10px solid transparent; 
+		    background-color: transparent;
+		    outline: none;
+		    border-right: none;
+		    top: 50%;
+		    left: 5px;
+		    right: 0;
+		    margin: -10px auto 0;	    	
+	    }
+	}
+	&--playing {
+		@extend .btn;
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -15px;
+		margin-left: -15px;
+		text-align: center;
+
+		&:before {
+			content: "";
+			width: 6px;
+			height: 100%;
+			background-color: $white;
+			display: inline-block;
+			margin-left: 3px;
+			margin-right: 3px;
+		}
+
+		&:after {
+			content: "";
+			height: 100%;
+			background-color: $white;
+			width: 6px;
+			margin-left: 3px;
+			margin-right: 3px;
+			display: inline-block;
+		}
+	}
+	&--next {
+		@extend .btn;
+		position: absolute; 
+	    height: 0px; 
+	    width: 0px; 
+	    border-top: 10px solid transparent; 
+	    border-left: 20px solid $white; 
+	    border-bottom: 10px solid transparent; 
+	    background-color: transparent;
+	    outline: none;
+	    top: 50%;
+	    left: 65%;
+	    margin: -10px auto 0;
+	    &:after {
+	    	@extend .btn;
+	    	content: "";
+			position: absolute;
+			width: 3px;
+			left: -7px;
+			background-color: #fff;
+			top: -9px;
+			bottom: -9px;
+	    }
+
+	}
+	&--repeat {
+		@extend .btn;
+		position: absolute;
+		right: 18px;
+		left: 10px;
+		bottom: 12px;
+	}
+}
+
+.green {
+	svg {
+		path {
+			stroke: forestgreen;
+		}
+		.svgarrow {
+			fill: forestgreen;
+		}
+	}
+}
+
+.activeApp {
+	z-index: 50;
+	display: block;
+}
